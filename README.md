@@ -11,6 +11,7 @@ The Color App is a simple Angular application that continuously fetches random c
 - [Project Structure](#project-structure)
 - [How It Works](#how-it-works)
 - [Running Unit Tests](#running-unit-tests)
+- [Containerize App](#containerize-app)
 - [Future Improvements](#future-improvements)
 - [Contributing](#contributing)
 - [License](#license)
@@ -41,7 +42,11 @@ Follow these steps to set up and run the Color App:
     ```
 3. Install dependencies:
     ```bash
-    npm install
+    npm install 
+    ```
+4. Install Angular CLI dependencies:
+    ```bash
+    npm install -g @angular/cli@12.2.7
     ```
 4. Start the Angular development server:
     ```bash
@@ -81,6 +86,14 @@ Unit tests are available to ensure the functionality of the Color App:
     ng test
     ```
 2. Jasmine testing framework will execute the tests and provide the results.
+
+## Containerize App
+To containerize this angular app and access from localhost, run docker compose file:
+
+    ```bash
+    docker compose up
+    ```
+Make sure the app running well without error in log terminal.
 
 ## Further Improvements
 

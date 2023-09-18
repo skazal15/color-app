@@ -1,0 +1,19 @@
+# docker-compose.yaml
+version: '3'
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: angular-color-app
+    networks:
+      - colornetwork
+    volumes:
+      - '.:/app'
+      - '/app/node_modules'
+    ports:
+      - '4200:4200'
+
+networks:
+  colornetwork:
+    external: true
