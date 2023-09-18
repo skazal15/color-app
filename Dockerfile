@@ -3,13 +3,13 @@ FROM node:16.10.0
 
 WORKDIR /app
 
-COPY package*.json ./
+COPY package*.json .
 
 RUN npm install
 
 RUN npm install -g @angular/cli@12.2.7
 
-COPY . /app
+COPY . .
 
 EXPOSE 4200
 
